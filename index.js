@@ -24,7 +24,7 @@ function rectangleArea (className1, className2, polygon) {
 function elipseArea (className1, className2, polygon) {
   let b = document.querySelector(className1);
   let h = document.querySelector(className2);
-  let area = Math.PI * Number(b.value) * Number(h.value);
+  let area = 3.14 * Number(b.value) * Number(h.value);
   console.log(area);
   results.push({name: polygon, result: area});
   console.log(results);
