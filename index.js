@@ -52,12 +52,21 @@ function metreConvert (className, resultcm) {
 
 let cards = document.querySelectorAll('.card');
 
+// generates random color
 function randomColor() {
-  const colors = ['pink', 'yellow', 'yellowgreen', 'orange', ]
+  const colors = ['pink', 'yellow', 'yellowgreen', 'orange', 'skyblue'];
+  let randomI = Math.floor(Math.random() * colors.length);
+  return colors[randomI];
 }
 
-cards.forEach((card,index)=> {
-  card.addEventListener('mouseover', (e)=> {
-    console.log('mouse moving');
+cards.forEach((card)=> {
+  card.addEventListener('mouseenter', ()=> {
+    let color = randomColor();
+    card.style.backgroundColor = color;
+  });
+
+  card.addEventListener('mouseleave', ()=>{
+    card.removeAttribute('style');
   })
+
 })
