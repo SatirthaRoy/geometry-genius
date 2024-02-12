@@ -25,8 +25,7 @@ function elipseArea (className1, className2, polygon) {
   let b = document.querySelector(className1);
   let h = document.querySelector(className2);
   let area = 3.14 * Number(b.value) * Number(h.value);
-  area = area.toFixed(2);
-  results.push({name: polygon, result: area});
+  results.push({name: polygon, result: area.toFixed(2)});
   console.log(results);
   renderResult();
 }
